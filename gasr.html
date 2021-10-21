@@ -9,9 +9,9 @@
 
 <body>
     <!-- a container div is common for sites, so the entire site can have a boundary -->
-    <div>
+    <div id="container">
         <header>
-            <img src="images/header-mobile.jpg" alt="Generically Awesome Super RPG">
+            <img class="header-image" src="images/header-mobile.jpg" alt="Generically Awesome Super RPG">
 
             <nav>
                 <ul>
@@ -29,20 +29,20 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" class="current">
                             <img src="images/chars.png"  alt="characters nav link">
                             <span>Characters</span>
                         </a>
                     </li>
                 </ul>
 
-                <a href="#">Play!</a>
+                <a href="#" id="play">Play!</a>
             </nav>
         </header>
 
         <!-- articles are a great way to connect text, and sections can be used to declare specific 
         parts of that article -->
-        <article>
+        <article class="clearfix">
             <h2>Characters</h2>
             <section>
                 <p class="larger">

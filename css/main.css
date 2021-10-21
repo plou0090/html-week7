@@ -46,3 +46,148 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/******************************************************* 
+						DEFAULTS
+*******************************************************/
+
+html{
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 10px; /* 10 px makes it easier to do ems and rems math later on */
+	color: #0ff;
+	background: black;
+}
+
+h2{
+	font-size: 3.2rem; /* 32px, because the default sive is 10px */
+}
+
+p{
+	font-size: 1.6rem;
+}
+
+
+/************************************************************* 
+							MAIN
+*************************************************************/
+
+/* style element with ID container */
+#container{
+	width: 1024px;
+	margin: 0 auto; /* 0 on top and bottom, auto on left and right, this will center the element in the browser window */
+}
+
+/* style image with class header-image */
+.header-image{
+	width: 100%; /* this will fit the image to the area it is contained in, in this case it is the div tage */
+}
+
+/* .larger span{
+	display: block;
+
+	width: 200px;
+	height: 100px;
+	margin: 25px;
+	padding: 15px;
+	border: 2px solid yellow;
+} */
+
+
+/************************************************************* 
+							NAV
+*************************************************************/
+
+nav{
+	height: 44px;
+	margin-bottom: 20px;
+	border-bottom: 2px solid #204;
+}
+
+nav li{
+	float: left;
+	/* this make the list items, which are all block elements, sit next to eachother */
+}
+
+nav a{
+	display: block; /* turns them into boxes */
+	text-decoration: none;
+	width: 142px;
+	height: 44px;
+	text-align: center;
+	margin: 0 5px;
+}
+
+nav li a span{
+	display: block;
+	float: left;
+	font-size: 1.6rem; /* rem is the root font size */
+	line-height: 2.5em; /* em is the size based on the element it is in */
+	color: #0ff; /* color is font color, there is no difference */
+}
+
+nav a img{
+	width: 22px;
+	padding: 0.7em 5px 0 15px;
+	float: left;
+}
+
+nav a:hover, .current{
+	background: #220044;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 15px;
+}
+
+#play{
+	color: #0ff;
+	float: right;
+	font-size: 2.0rem;
+	background: #220044;
+	border: 1px solid #0ff;
+	border-radius: 10px;
+	padding: 0.5em;
+	height: auto;
+}
+
+
+/************************************************************* 
+							CONTENT
+*************************************************************/
+
+section{
+	margin: 2%; 
+	border: 2px solid #0ff;
+	padding: 20px 10px 15px 25px;
+	/* when you use four values for padding or margin in an element you put them in the order: top, right, bottom, left */
+
+	/* 
+	you can style padding, margin, and border, on each side of an element individually: 
+	padding-top
+	padding-left
+	padding-right
+	padding-bottom
+	etc...
+	*/
+
+	width: 46%;
+	height: 200px;
+	float: left;
+	box-sizing: border-box; /* this will tell the browser to automatically calculate the size of the element */
+}
+
+article{
+	background-color: burlywood;
+	padding-bottom: 50px;
+}
+
+/* applying clearfix to an element makes it see the height of the floated elements inside of it */
+/* the after section is attached to the bottom of the element */
+.clearfix:after{
+	content: ""; /* this and the display table make the "after" section show up */
+	display: table;
+	clear: both;
+  }
+
+/* one way to fix the floating heigt problem is to use clear */
+footer{
+	clear: both; /* you can clear either right or left, or both */
+}
