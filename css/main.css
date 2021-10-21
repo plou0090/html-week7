@@ -139,13 +139,19 @@ nav a:hover, .current{
 
 #play{
 	color: #0ff;
-	float: right;
+	/* float: right; */
 	font-size: 2.0rem;
 	background: #220044;
 	border: 1px solid #0ff;
 	border-radius: 10px;
 	padding: 0.5em;
 	height: auto;
+
+	/* use position fixed to make the button stay on the screen even when the user scrolls */
+	position: fixed;
+	/* set the position relative to the browser window */
+	top:5%;
+	right:10%;
 }
 
 
@@ -175,7 +181,7 @@ section{
 }
 
 article{
-	background-color: burlywood;
+	background-color: #220044;
 	padding-bottom: 50px;
 }
 
@@ -191,3 +197,5 @@ article{
 footer{
 	clear: both; /* you can clear either right or left, or both */
 }
+
+/*
